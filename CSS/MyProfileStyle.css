@@ -9,6 +9,10 @@
 #FFA400 Orange Web
 */
 
+body {
+    font-family: 'Arvo', serif;
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -112,8 +116,10 @@
     text-align: center;
 }
 
-h1 {
-    font-family: 'Arvo', serif;
+h1,
+h2,
+h3,
+h4 {
     color: #011638;
 }
 
