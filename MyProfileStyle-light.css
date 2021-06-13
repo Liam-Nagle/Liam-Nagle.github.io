@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Arvo', serif;
+    transition: 0.5s;
 }
 
 .container {
@@ -24,6 +25,8 @@ body {
     overflow: hidden;
     padding: 6px;
     text-align: center;
+    width: 100%;
+    transition: 0.5s;
 }
 
 .topnav-centered {
@@ -123,19 +126,86 @@ h4 {
     color: #011638;
 }
 
+.topnav-right {
+    float: right;
+    padding-top: 10px;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #FFFFFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #011638;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #011638;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 @media only screen and (min-width: 1200px) {
     /* Remove Hamburger Menu on Larger Displays */
     .topnav #hamburger {
         font-size: 0;
-    }
-    .topnav-centered img {
-        float: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 100%;
-        max-height: 100%;
     }
     /* Style the links inside the navigation bar */
     .navmenu {
@@ -154,5 +224,11 @@ h4 {
     /* Menu Styling to move nav menu around */
     .menu {
         display: inline-block;
+        margin: 0 auto;
+        padding-left: 80px;
+    }
+    .topnav-right {
+        float: right;
+        padding-top: 33px;
     }
 }

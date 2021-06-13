@@ -5,7 +5,7 @@
     <meta charset="utf=8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Liam Nagle" />
     <meta name="description" content="Amazing webpage" />
-    <link rel="stylesheet" href="CSS/MyProfileStyle.css">
+    <link rel="stylesheet" href="MyProfileStyle-light.css" id="theme">
     <!-- Stylesheet for Hambuger Menu Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Stylesheet for Fonts -->
@@ -35,11 +35,20 @@
 
             <!-- Nav for Desktop -->
             <div class="menu">
-                <hr class="hrLines">
+                <hr class="hr-lines">
                 <a class="navmenu" href="index.html">Liam's Profile</a>
                 <a class="navmenu" href="projects.html">Projects</a>
                 <a class="navmenu" href="https://www.linkedin.com/in/liam-nagle-92b0871b9/" target="_blank">My LinkedIn</a>
-                <hr class="hrLines">
+                <a class="navmenu" href="https://github.com/Liam-Nagle/" target="_blank">My Github</a>
+                <hr class="hr-lines">
+            </div>
+
+            <div class="topnav-right">
+                <label id="theme-label">Light</label>
+                <label class="switch" href="javascript:void(0);" onclick="lightDark()">
+                    <input type="checkbox" id="style-toggle">
+                    <span class="slider round"></span>
+                  </label>
             </div>
 
         </div>
@@ -47,7 +56,7 @@
             <header>
                 <img src="Images/profilepic.jpg" alt="My Profile Picture" width="250" height="250">
                 <h1>Liam Nagle</h1>
-                <hr>
+                <hr class="hr-lines">
             </header>
         </div>
 
@@ -56,22 +65,22 @@
             <section class="box-1">
                 <h4>My Skills</h4>
                 <ol>
-                    <li><a href="#">Testing</a></li>
-                    <li><a href="#">Even More Testing</a></li>
-                    <li><a href="#">Bit of Dev too</a></li>
+                    <li>SQL</li>
+                    <li>C#</li>
+                    <li>Lots of testing</li>
                 </ol>
             </section>
             <section class="box-1">
                 <h4>Hobbies</h4>
                 <ul>
-                    <li>Football</li>
+                    <li>Drinking</li>
                     <li>Video Games</li>
-                    <li>Music</li>
+                    <li>More of both</li>
                 </ul>
             </section>
             <section class="box-2">
                 <h4>Goals</h4>
-                <p>Become President</p>
+                <p>Not a huge football fan tbh</p>
             </section>
         </div>
         <h3>An ode to Eng-86</h3>
@@ -100,6 +109,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/sidenav.js"></script>
+    <script type="text/javascript" src="javascript/LightDarkTheme.js"></script>
 </body>
 
 </html>
